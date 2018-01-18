@@ -94,9 +94,9 @@ void tcp_init()
 	struct sockaddr_in claddr2 ={0};//客户端2Soclet地址
 	struct addr addr[2]={ {claddr1,claddr2,&cfd[0],&cfd[1]},
 			      {claddr2,claddr1,&cfd[1],&cfd[0]},};
-	printf("%p %p\n",(addr[0].host_cfd),(addr[0].net_cfd));
-	printf("%p %p\n",(addr[1].host_cfd),(addr[1].net_cfd));
 
+	printf("h_add=%p n_add=%p h_cfd=%p n_cfd=%p\n",&(addr[0].host_claddr),&(addr[0].net_claddr),(addr[0].host_cfd),(addr[0]    .net_cfd));
+	printf("h_add=%p n_add=%p h_cfd=%p n_cfd=%p\n",&(addr[1].host_claddr),&(addr[1].net_claddr),(addr[1].host_cfd),(addr[1]    .net_cfd));
 
 
 	//1.创建监听 Socket
