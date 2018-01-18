@@ -98,6 +98,8 @@ void tcp_init()
 	printf("%p %p\n",(addr[0].host_cfd),(addr[0].net_cfd));
 	printf("%p %p\n",(addr[1].host_cfd),(addr[1].net_cfd));
 
+
+
 	//1.创建监听 Socket
 	if((lfd=socket(AF_INET,SOCK_STREAM,0)) == -1)
 	{
