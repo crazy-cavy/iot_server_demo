@@ -178,28 +178,8 @@ void tcp_init()
 int main(int argc, char **argv)
 {
 
-//	struct sockaddr_in svaddr1;//服务器1Socket地址
-//	struct sockaddr_in claddr1;//客户端1Soclet地址
-//	struct sockaddr_in svaddr2;//服务器2Socket地址
-//	struct sockaddr_in claddr2;//客户端2Soclet地址
-//	int cfd1,cfd2;
-//	struct addr addr1={svaddr1,claddr1,svaddr2,claddr2,cfd1,cfd2};
-//	struct addr addr2={svaddr2,claddr2,svaddr1,claddr1,cfd2,cfd1};
 
 	tcp_init();
-	//int err;
-//	err = pthread_create(&ntid1,NULL,tcp_fun,(void *)&addr1);
-//	if(err!=0)
-//	{
-//		printf("can't create thread1:%s\n",strerror(err));	
-//	}
-//	printf("create thread1 sucess!\n");
-//	err = pthread_create(&ntid2,NULL,tcp_fun,(void *)&addr2);
-//	if(err!=0)
-//	{
-//		printf("can't create thread1:%s\n",strerror(err));	
-//	}
-//	printf("create thread2 sucess!\n");
 	while(1)
 	{
 		sleep(3);	
