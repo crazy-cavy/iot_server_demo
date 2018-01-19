@@ -1,6 +1,6 @@
-/*DATA:			2015-4-20
- *AUTHOR:		WJ
- *DESCRIPTION:	多线程TCP服务器
+/*DATA:			2018.1.19
+ *AUTHOR:		cavy
+ *DESCRIPTION:	多用户TCP物联网服务器，高并发性
  *	1、int socket(int domain, int type, int protocol);
  *	2、int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
  *	3、int listen(int sockfd, int backlog);
