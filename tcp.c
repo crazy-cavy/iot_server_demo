@@ -36,8 +36,8 @@ struct addr
 
 
 int lfd=0,cfd[CFD_MAX]={0};		//监听Socket与客户端套接字描述符 
-struct sockaddr_in claddr1 ={0};//客户端1Soclet地址
-struct sockaddr_in claddr2 ={0};//客户端2Soclet地址
+struct sockaddr_in claddr1 ={0};	//客户端1Soclet地址
+struct sockaddr_in claddr2 ={0};	//客户端2Soclet地址
 struct addr addr[2]={ {&claddr1,&claddr2,&cfd[0],&cfd[1]},
 	{&claddr2,&claddr1,&cfd[1],&cfd[0]},};
 
@@ -59,10 +59,15 @@ void *tcp_recv(void *arg)
 	{
 		//6.接收/发送数据
 		//6.1 接受数据
-		if(recv(*(addr->host_cfd),buf,BUFSIZE,0) == -1)
+		int len = recv(*(addr->host_cfd),buf,BUFSIZE,0);	
+		if(-1 == len )
 		{
 			perror("recv()"),exit(-1);
-		}	
+		}
+		else if(0 == len )
+		{
+			pthread_exit(0);
+		}
 		//6.2 发送数据
 		else
 		{
