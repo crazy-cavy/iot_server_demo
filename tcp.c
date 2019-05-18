@@ -195,7 +195,7 @@ int main(int argc, char **argv)
 	tcp_init();
 	while(1)
 	{
-		sleep(3);	
+		//sleep(3);	
 	}
 	return 0; 
 
